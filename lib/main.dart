@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'core/config/theme/theme.dart' as apptheme;
+import 'core/config/router/app_routes.dart';
+import 'core/config/router/route_generator.dart';
+import 'l10n/app_localizations.dart';
+import 'core/services/navigation_service.dart';
 
 void main() {
   runApp(
@@ -17,13 +21,21 @@ class MyApp extends StatelessWidget {
       theme: apptheme.lightTheme,
       darkTheme: apptheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: Scaffold(
-        body: Center(
-            child: Text(
-              'My Homepage!',
-            )
-        )
-      )
+      
+      // Route settings (standard file separation)
+      initialRoute: AppRoutes.initial,
+      onGenerateRoute: RouteGenerator.generateRoute,
+
+      // Route settings (GoRouter Package)
+      
+
+      // app localization
+      // locale: Locale(_languageCode),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+
+      // navigation service
+      navigatorKey: NavigationService.instance.navigatorKey,
     );
   }
 }
