@@ -4,11 +4,21 @@ import 'core/config/router/app_routes.dart';
 import 'core/config/router/route_generator.dart';
 import 'l10n/app_localizations.dart';
 import 'core/services/navigation_service.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-void main() {
+void main() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await initializationTasks();
+
   runApp(
     const MyApp(),
   );
+}
+
+Future<void> initializationTasks () async {
+  await Future.delayed(Duration(seconds: 3));
+  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Fclean',
       theme: apptheme.lightTheme,
       darkTheme: apptheme.darkTheme,
       themeMode: ThemeMode.system,

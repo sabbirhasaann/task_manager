@@ -270,7 +270,32 @@
 
 
 4.  Native Splash Screen Set up{
+    1.  add flutter_native_splash by running
+        flutter pub add flutter_native_splash
+        
+        package: https://pub.dev/packages/flutter_native_splash
+    
+    2. Settings the spalsh screen
+    
+    3.  Create a new file called flutter_native_splash.yaml and copy paste the given code in web
+    
+    4.  Run the package
+        dart run flutter_native_splash:create --path=flutter_native_splash.yaml
 
+    5.  Add icons to assets and the recognize it by pubspec.yml
+    
+    4.  Set up app initialization
+        ```dart
+        import 'package:flutter_native_splash/flutter_native_splash.dart';
+        void main() {
+        WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+        FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+        runApp(const MyApp());
+        }
+
+        // whenever your initialization is completed, remove the splash screen:
+            FlutterNativeSplash.remove();
+        ```
     }
 
 5.  Navigation Service (Clean Architecture){
