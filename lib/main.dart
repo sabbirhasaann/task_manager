@@ -6,14 +6,25 @@ import 'l10n/app_localizations.dart';
 import 'core/services/navigation_service.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'core/services/splash_service.dart';
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await initializationTasks();
+  
+  SplashService.init(widgetsBinding);
+  await Future.delayed(const Duration(seconds: 3));
+
+  // if(kIsWeb){
+  //   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  //   await initializationTasks();
+  // }
 
   runApp(
     const MyApp(),
   );
+
+  SplashService.remove();
+
 }
 
 Future<void> initializationTasks () async {
@@ -41,6 +52,7 @@ class MyApp extends StatelessWidget {
 
       // app localization
       // locale: Locale(_languageCode),
+      locale: Locale('bn'),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
 

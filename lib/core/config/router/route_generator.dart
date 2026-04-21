@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_routes.dart';
+import '../../../l10n/app_localizations.dart';
 // Import your screens here
 
 class RouteGenerator {
@@ -26,8 +27,18 @@ class HomeView extends StatelessWidget {
   const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Home View'),
+    final l10n = AppLocalizations.of(context)!;
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Text('Home View'),
+            Text(
+              l10n.helloWorld,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
