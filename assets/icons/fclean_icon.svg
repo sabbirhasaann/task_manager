@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.9333 270.9333"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="fclean_icon.svg"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">fcleanLogo</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     borderlayer="true"
+     showguides="true"
+     inkscape:lockguides="false"
+     inkscape:zoom="0.68158229"
+     inkscape:cx="350.65465"
+     inkscape:cy="509.84306"
+     inkscape:window-width="1854"
+     inkscape:window-height="1011"
+     inkscape:window-x="66"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient4"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#1957e9;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#2eebcc;stop-opacity:0.70588237;"
+         offset="0.29280397"
+         id="stop6" />
+      <stop
+         style="stop-color:#63a6f0;stop-opacity:0;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient5"
+       x1="85.001973"
+       y1="135.46665"
+       x2="185.93132"
+       y2="135.46665"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="display:none;opacity:1;fill:#000000;fill-opacity:0.107732;stroke-width:0.483756"
+       id="path2"
+       cx="135.46664"
+       cy="135.46664"
+       inkscape:label="circle 676 * 676"
+       r="89.429153" />
+    <path
+       style="opacity:1;fill:url(#linearGradient5);fill-opacity:1;stroke-width:0.296781"
+       d="m 86.347697,61.710583 -1.345724,146.666787 36.334567,0.84534 -1.34572,-68.47267 50.24039,0.84534 -0.89715,-28.74162 -50.68897,-1.26801 -0.44857,-20.710877 67.7348,0.42267 V 62.978597 Z"
+       id="path4" />
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>fcleanLogo</dc:title>
+        <dc:date>21/04/2026</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>onyx</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

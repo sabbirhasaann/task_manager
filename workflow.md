@@ -138,8 +138,136 @@
     }
 
 3.  Launcher Icon Set up{
+        1.  Install flutter_launcher_icons package by
+            flutter pub add flutter_launcher_icons
+        2.  Add dependency under dev_dependencies
+            
+            flutter_launcher_icons:
+                android: "launcher_icon"
+                ios: true
+                image_path: "assets/images/app_logo.png"
+                adaptive_icon_background: "#ffffff" # For Android Adaptive Icons
+                adaptive_icon_foreground: "assets/images/app_logo_foreground.png"
+        3.  Then - run
+            flutter pub run flutter_launcher_icons
+            dart run flutter_launcher_icons
+
+        icons:
+
+        https://www.template.net/graphic-design/icon-sizes/
+        article
+        
+        The industry standard for Android launcher icons (adaptive icons) is a base size of 
+
+        dp (
+
+        px at XXXHDPI) for both foreground and background layers. The Google Play Store requires a final 
+
+        px PNG. For UI icons, the standard size is 
+
+        dp. 
+        Android Developers
+        Android Developers
+        +3
+        Key Android Launcher Icon Standards:
+        Total Size: 
+
+        dp (inclusive of safe zone).
+        Safe Zone: 
+
+        dp (content should stay within this to avoid masking).
+        Icon Area: 
+
+        dp.
+        File Format: 32-bit PNG.
+        Play Store Requirements: 
+
+        px, 32-bit PNG, max 1024KB.
+        Density Sizes:
+        XXXHDPI: 
+
+        px
+        XXHDPI: 
+
+        px
+        XHDPI: 
+
+        px
+        HDPI: 
+
+        px 
+        Android Developers
+        Android Developers
+        +4
+        Key iOS Icon Standards:
+        App Store: 
+
+        px (1024x1024pt).
+        iPhone: 
+
+        px (@3x) or 
+
+        px (@2x).
+        iPad: 
+
+        px (@2x) or 
+
+        px (@2x). 
+        Adapty
+        Adapty
+        +4
+        Key Windows Icon Standards:
+        Modern/Desktop: 
+
+        px.
+        Standard Explorer: 
+
+        px. 
+        creativefreedom.co.uk
+        creativefreedom.co.uk
+
+        icon sizes:
+        Industry standard icon sizes are generally based on multiples of 8 or 4 (e.g., 16, 24, 32, 48, 64) for screen-based, pixel-perfect alignment. Common standards include 24x24 px for UI icons (Material Design) and 512x512 px for app store icons (Android/iOS). 
+        Stack Overflow
+        Stack Overflow
+        +2
+        Core Interface Icon Sizes (PNG/SVG)
+        16x16 px: Small interface elements, status indicators, and browser favicons.
+        20x20 px: Compact layouts, small-scale visuals.
+        24x24 px: Most common baseline for standard toolbar/menu icons on mobile and web.
+        32x32 px: Larger UI elements, desktop toolbars.
+        48x48 px: Touch targets on mobile, Settings, and desktop icons. 
+        Icons8
+        Icons8
+        +4
+        App Icon Sizes (Store and Launchers)
+        512x512 px: The standard master artwork size for Android app submissions to Google Play and common in Windows.
+        1024x1024 px: Master size for Apple iOS and macOS app icons.
+        180x180 px: Standard iPhone 6S and higher Home Screen icon.
+        192x192 px: Standard Android PWA (Progressive Web App) icon. 
+        Icons8
+        Icons8
+        +4
+        Platform-Specific Guidelines
+        Material Design (Android): 24dp is the baseline, often on a 48x48dp touch target.
+        iOS/iPadOS: Favors 24pt, 30pt, or 40pt for toolbar/navigation bar icons.
+        Windows: Supports 16, 32, 48, 256, and 512px; suggests providing 256px+ to ensure crisp scaling.
+        Web Favicon: 16x16, 32x32, 48x48, or a 48x48+ multiple for Google Search results. 
+        Microsoft Learn
+        Microsoft Learn
+        +4
+        Best Practices
+        Use SVG: Always prefer vector format (.svg) for scalability.
+        Padding: Leave 2px of empty space on the edges of a 24x24 frame (16x16 or 20x20 live area).
+        Consistency: Keep the stroke thickness and style (filled/outlined) consistent across a set.
+        Touch Targets: Ensure interactive icons have a touch target of at least 44x44 (Apple) or 48x48 (Google) dp. 
+        DEV Community
+        DEV Community
+        +3
 
     }
+
+
 
 4.  Native Splash Screen Set up{
 
