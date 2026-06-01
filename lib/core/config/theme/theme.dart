@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../constants/app_colors.dart';
-import '../../constants/app_text_styles.dart';
+import '../../constants/app_colors_1.dart';
+import '../../constants/app_text_styles_1.dart';
 
 ThemeData get lightTheme => ThemeData(
   useMaterial3: true,
