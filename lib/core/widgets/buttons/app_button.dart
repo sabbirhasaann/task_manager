@@ -10,14 +10,25 @@ enum ButtonVariants { primary, secondary }
 class AppButton extends StatelessWidget {
   final ButtonVariants variants;
   final String label;
+  final TextStyle? appTextStyle;
   final VoidCallback onPressed;
   final double? width;
+  final double? height;
+  final String? leftIcon;
+  final String? rightIcon;
+  final Color? bgColor, frColor;
   const AppButton({
     super.key,
     required this.label,
     required this.variants,
     required this.onPressed,
     this.width,
+    this.height,
+    this.leftIcon,
+    this.rightIcon,
+    this.appTextStyle,
+    this.bgColor,
+    this.frColor,
   });
 
   @override
@@ -30,8 +41,8 @@ class AppButton extends StatelessWidget {
         backgroundColor = AppColors.primary;
         foregroundColor = AppColors.white;
       default:
-        backgroundColor = AppColors.black;
-        foregroundColor = AppColors.white;
+        backgroundColor = bgColor ?? AppColors.black;
+        foregroundColor = frColor ?? AppColors.white;
     }
 
     Widget content = Padding(
@@ -40,27 +51,33 @@ class AppButton extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AppGap.wMD,
+          // AppGap.wMD,
           Expanded(
             child: Text(
               label,
               textAlign: TextAlign.center,
-              style: AppTextStyles.lexenDecaSemiBold19px.copyWith(
-                color: foregroundColor,
-              ),
+              style:
+                  appTextStyle ??
+                  AppTextStyles.lexenDecaSemiBold19px.copyWith(
+                    color: foregroundColor,
+                  ),
             ),
           ),
 
-          SizedBox(
-            height: 24,
-            width: 24,
-            child: Image.asset(AppIcons.arrowLeft, color: foregroundColor),
-          ),
+          if (rightIcon != null)
+            SizedBox(
+              height: 24,
+              width: 24,
+              child: Image.asset(
+                AppIcons.arrowLeft,
+                color: foregroundColor,
+              ),
+            ),
         ],
       ),
     );
     return SizedBox(
-      height: 65,
+      height: height ?? 65,
       width: width ?? double.infinity,
       child: ClipPath(
         clipper: BarrelButtonClipper(),
