@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 
 /*constants */
 import 'package:task_manager/core/constants/app_colors.dart';
-import 'package:task_manager/core/constants/app_spacing_1.dart';
-import 'package:task_manager/core/constants/app_text_styles.dart';
 
 /*widget */
 import 'package:task_manager/features/home/presentation/widgets/home_card.dart';
 import 'package:task_manager/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:task_manager/features/home/presentation/widgets/progress_card.dart';
+import 'package:task_manager/features/home/presentation/widgets/progress_title.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -26,28 +25,9 @@ class HomeView extends StatelessWidget {
             child: HomeCard(),
           ),
 
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 22,
-              vertical: 22,
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  'In Progress',
-                  style: AppTextStyles.lexenDecaSemiBold19px,
-                ),
-                AppGap.wMD,
-                CircleAvatar(
-                  radius: 8,
-                  child: Text(
-                    '5',
-                    style: AppTextStyles.lexenDecaRegular11px,
-                  ),
-                ),
-              ],
-            ),
+          ProgressTitle(
+            title: 'In Progress',
+            count: 2,
           ),
 
           Padding(
@@ -82,6 +62,10 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          ProgressTitle(
+            title: 'Task Group',
+            count: 4,
           ),
         ],
       ),
