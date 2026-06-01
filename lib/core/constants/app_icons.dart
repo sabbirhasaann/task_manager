@@ -27,4 +27,6 @@ class AppIcons {
   static const String stopwatch = '$baseImageePath/stopwatch.png';
   static const String vase = '$baseImageePath/vase.png';
   static String profilePic = '$baseImageePath/profile_pic.png';
+
+  static String moreIcon = '$baseIconPath/more.png';
 }
