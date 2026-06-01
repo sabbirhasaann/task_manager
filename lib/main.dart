@@ -6,11 +6,11 @@ import 'l10n/app_localizations.dart';
 import 'core/services/navigation_service.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'core/services/splash_service.dart';
+
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  
+
   SplashService.init(widgetsBinding);
   await Future.delayed(const Duration(seconds: 3));
 
@@ -19,15 +19,12 @@ void main() async {
   //   await initializationTasks();
   // }
 
-  runApp(
-    const MyApp(),
-  );
+  runApp(const MyApp());
 
   SplashService.remove();
-
 }
 
-Future<void> initializationTasks () async {
+Future<void> initializationTasks() async {
   await Future.delayed(Duration(seconds: 3));
   FlutterNativeSplash.remove();
 }
@@ -38,17 +35,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fclean',
+      title: 'task_manager',
       theme: apptheme.lightTheme,
       darkTheme: apptheme.darkTheme,
       themeMode: ThemeMode.system,
-      
+
       // Route settings (standard file separation)
       initialRoute: AppRoutes.initial,
       onGenerateRoute: RouteGenerator.generateRoute,
 
       // Route settings (GoRouter Package)
-      
 
       // app localization
       // locale: Locale(_languageCode),

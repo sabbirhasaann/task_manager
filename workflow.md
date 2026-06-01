@@ -331,4 +331,4 @@
         ```
         In route
         NavigationService.instance.navigateTo(AppRoutes.details);
-    
+7.  I have just renamed my project folder name. This project is a blue print of flutter clean architecture. Now where need to specific changes need to rename whole project name.

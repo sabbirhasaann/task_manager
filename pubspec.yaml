@@ -1,4 +1,4 @@
-name: fclean
+name: task_manager
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -62,9 +62,9 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/icons/fclean_icon_full.png"
+  image_path: "assets/icons/task_manager_icon_full.png"
   adaptive_icon_background: "#ffffff" # For Android Adaptive Icons
-  adaptive_icon_foreground: "assets/icons/fclean_icon_foreground.png"
+  adaptive_icon_foreground: "assets/icons/task_manager_icon_foreground.png"
 
 
 flutter:
