@@ -3,8 +3,8 @@ import 'package:task_manager/core/constants/app_spacing.dart';
 import 'package:task_manager/core/constants/app_colors.dart';
 import 'package:task_manager/core/constants/app_icons.dart';
 import 'package:task_manager/core/constants/app_text_styles.dart';
+import 'package:task_manager/core/services/navigation_service.dart';
 import 'package:task_manager/core/widgets/buttons/app_button.dart';
-import 'package:task_manager/features/main_wrapper/presentation/pages/main_wrapper_view.dart';
 import 'package:task_manager/features/onboarding/presentation/widgets/onboarding_background_painter.dart';
 
 /* Custom painter*/
@@ -110,18 +110,12 @@ class OnboardingView extends StatelessWidget {
                 label: 'Let\'s Start',
                 variants: ButtonVariants.primary,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (ctx) {
-                        return const MainWrapperView();
-                      },
-                    ),
-                  );
+                  NavigationService.instance.navigateToRoute('homeView/');
                 },
 
                 width: 300,
               ),
+
               AppGap.hJumbo,
               AppGap.hXXL,
             ],
