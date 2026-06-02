@@ -4,8 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:task_manager/core/constants/app_icons.dart';
 import 'package:task_manager/core/constants/app_text_styles.dart';
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class AppAppBar extends StatelessWidget {
+  final bool isHome;
+  final String? title;
+  const AppAppBar({
+    super.key,
+    this.isHome = false,
+    this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,37 +23,52 @@ class HomeAppBar extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CircleAvatar(
-            child: SizedBox(
-              height: 46,
-              width: 46,
-              child: Image.asset(
-                AppIcons.profilePic,
+          isHome
+              ? CircleAvatar(
+                  child: SizedBox(
+                    height: 46,
+                    width: 46,
+                    child: Image.asset(
+                      AppIcons.profilePic,
+                    ),
+                  ),
+                )
+              : SizedBox(
+                  child: Image.asset(
+                    AppIcons.arrowRight,
+                  ),
+                ),
+          if (isHome)
+            const SizedBox(
+              width: 36,
+            ),
+          if (isHome)
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Hello!',
+                  style: AppTextStyles.lexenDecaRegular14px,
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+                Text(
+                  'Livia Vaccaro',
+                  style: AppTextStyles.lexenDecaSemiBold19px,
+                ),
+              ],
+            ),
+          if (!isHome)
+            Expanded(
+              child: Text(
+                title ?? 'No title',
+                textAlign: TextAlign.center,
+                style: AppTextStyles.lexenDecaBold19px.copyWith(),
               ),
             ),
-          ),
-          const SizedBox(
-            width: 36,
-          ),
-
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Hello!',
-                style: AppTextStyles.lexenDecaRegular14px,
-              ),
-              const SizedBox(
-                height: 4,
-              ),
-              Text(
-                'Livia Vaccaro',
-                style: AppTextStyles.lexenDecaSemiBold19px,
-              ),
-            ],
-          ),
-          const Spacer(),
+          if (isHome) const Spacer(),
           Stack(
             children: [
               Positioned(

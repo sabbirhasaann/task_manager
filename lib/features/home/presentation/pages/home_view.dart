@@ -18,7 +18,9 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100),
-        child: HomeAppBar(),
+        child: AppAppBar(
+          isHome: true,
+        ),
       ),
       backgroundColor: AppColors.white,
       body: SingleChildScrollView(
