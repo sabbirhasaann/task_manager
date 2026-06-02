@@ -110,7 +110,8 @@ class OnboardingView extends StatelessWidget {
                 label: 'Let\'s Start',
                 variants: ButtonVariants.primary,
                 onPressed: () {
-                  NavigationService.instance.navigateToRoute('homeView/');
+                  // NavigationService.instance.navigateToRoute('homeView/');
+                  NavigationService.instance.navigateToRoute('taskView/');
                 },
 
                 width: 300,
