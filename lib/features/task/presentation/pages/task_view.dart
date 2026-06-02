@@ -3,6 +3,7 @@ import 'package:task_manager/core/constants/app_colors.dart';
 
 /*widgets */
 import 'package:task_manager/core/widgets/navigation/app_appbar.dart';
+import 'package:task_manager/features/task/presentation/widgets/calendar_widget.dart';
 
 class TaskView extends StatelessWidget {
   const TaskView({super.key});
@@ -20,7 +21,10 @@ class TaskView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: CalendarWidget(),
+            ),
           ],
         ),
       ),
