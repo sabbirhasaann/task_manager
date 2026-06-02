@@ -5,7 +5,7 @@ import 'package:task_manager/core/constants/app_colors.dart';
 
 /*widget */
 import 'package:task_manager/features/home/presentation/widgets/home_card.dart';
-import 'package:task_manager/features/home/presentation/widgets/home_app_bar.dart';
+import 'package:task_manager/core/widgets/navigation/app_appbar.dart';
 import 'package:task_manager/features/home/presentation/widgets/progress_card.dart';
 import 'package:task_manager/features/home/presentation/widgets/progress_title.dart';
 import 'package:task_manager/features/home/presentation/widgets/task_card.dart';
