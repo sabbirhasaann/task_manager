@@ -14,7 +14,6 @@ class HomeAppBar extends StatelessWidget {
         left: 22,
         right: 22,
         top: 27,
-        bottom: 24,
       ),
       child: Row(
         children: [
@@ -33,10 +32,14 @@ class HomeAppBar extends StatelessWidget {
 
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Hello!',
                 style: AppTextStyles.lexenDecaRegular14px,
+              ),
+              const SizedBox(
+                height: 4,
               ),
               Text(
                 'Livia Vaccaro',
