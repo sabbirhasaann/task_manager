@@ -8,6 +8,7 @@ import 'package:task_manager/features/home/presentation/widgets/home_card.dart';
 import 'package:task_manager/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:task_manager/features/home/presentation/widgets/progress_card.dart';
 import 'package:task_manager/features/home/presentation/widgets/progress_title.dart';
+import 'package:task_manager/features/home/presentation/widgets/task_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -66,6 +67,38 @@ class HomeView extends StatelessWidget {
           ProgressTitle(
             title: 'Task Group',
             count: 4,
+          ),
+
+          TaskCard(
+            title: 'Office Project',
+            subTitle: '23 Tasks',
+            frColor: Color(0xFFF478B8),
+            bgColor: Color(0xFFFFE4F2),
+            percentage: 70,
+          ),
+
+          TaskCard(
+            title: 'Person Project',
+            subTitle: '30 Tasks',
+            frColor: Color(0xFF9260F4),
+            bgColor: Color(0xFFEDE4FF),
+            percentage: 52,
+          ),
+
+          TaskCard(
+            title: 'Daily Project',
+            subTitle: '30 Tasks',
+            frColor: Color(0xFFFF9142),
+            bgColor: Color(0xFFFFE6D4),
+            percentage: 87,
+          ),
+
+          TaskCard(
+            title: 'Daily Study',
+            subTitle: '3 Tasks',
+            frColor: Color(0xFFFFD12E),
+            bgColor: Color(0xFFFFF6D4),
+            percentage: 87,
           ),
         ],
       ),
