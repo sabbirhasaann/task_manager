@@ -4,6 +4,7 @@ import 'package:task_manager/core/constants/app_colors.dart';
 /*widgets */
 import 'package:task_manager/core/widgets/navigation/app_appbar.dart';
 import 'package:task_manager/features/task/presentation/widgets/calendar_widget.dart';
+import 'package:task_manager/features/task/presentation/widgets/task_filter_bar.dart';
 
 class TaskView extends StatelessWidget {
   const TaskView({super.key});
@@ -11,6 +12,7 @@ class TaskView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100),
         child: AppAppBar(
@@ -25,6 +27,8 @@ class TaskView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 16),
               child: CalendarWidget(),
             ),
+
+            TaskFilterBar(),
           ],
         ),
       ),
