@@ -29,4 +29,5 @@ class AppIcons {
   static String profilePic = '$baseImageePath/profile_pic.png';
 
   static String moreIcon = '$baseIconPath/more.png';
+  static String timeCircle = '$baseIconPath/time_circle.png';
 }
