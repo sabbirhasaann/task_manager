@@ -33,22 +33,17 @@ class TaskView extends StatelessWidget {
             ),
 
             TaskFilterBar(),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 22.0,
-                vertical: 16,
-              ),
-              child: TaskFilterCard(
-                subtitle: "Grocery shopping app design",
-                title: "Market Research",
-                time: "10:00 AM",
-                status: "Done",
-                statusBgColor: Color(0xFFEDE4FF),
-                statusFrColor: AppColors.primary,
-                icon: AppIcons.briefcase,
-                iconFrColor: Color(0xFFF478B8),
-                iconBgColor: Color(0xFFFFE4F2),
-              ),
+
+            TaskFilterCard(
+              subtitle: "Grocery shopping app design",
+              title: "Market Research",
+              time: "10:00 AM",
+              status: "Done",
+              statusBgColor: Color(0xFFEDE4FF),
+              statusFrColor: AppColors.primary,
+              icon: AppIcons.briefcase,
+              iconFrColor: Color(0xFFF478B8),
+              iconBgColor: Color(0xFFFFE4F2),
             ),
           ],
         ),

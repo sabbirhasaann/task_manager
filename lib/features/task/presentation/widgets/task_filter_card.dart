@@ -32,106 +32,112 @@ class TaskFilterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.circular(15),
-        color: AppColors.white,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 32,
-            offset: Offset(0, 4),
-            color: AppColors.black.withAlpha(10),
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 22.0,
+        vertical: 16,
       ),
-
-      child: Stack(
-        children: [
-          Positioned(
-            top: 0,
-            right: 0,
-            child: Container(
-              height: 24,
-              width: 24,
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(7),
-                color: iconBgColor,
-              ),
-              child: Center(
-                child: Image.asset(
-                  icon,
-                  color: iconFrColor,
-                  width: 14,
-                  height: 14,
-                ),
-              ),
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.circular(15),
+          color: AppColors.white,
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 32,
+              offset: Offset(0, 4),
+              color: AppColors.black.withAlpha(10),
             ),
-          ),
+          ],
+        ),
 
-          Positioned(
-            bottom: 0,
-            right: 0,
-            child: Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 8,
-                vertical: 2,
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(AppRadius.full),
-                color: statusBgColor,
-              ),
-              child: Text(
-                status,
-                style: AppTextStyles.lexenDecaBold11px.copyWith(
-                  fontSize: 10,
-                  color: statusFrColor,
+        child: Stack(
+          children: [
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Container(
+                height: 24,
+                width: 24,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(7),
+                  color: iconBgColor,
                 ),
-              ),
-            ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                subtitle,
-                style: AppTextStyles.lexenDecaRegular11px.copyWith(
-                  color: AppColors.secondary,
-                ),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Text(
-                title,
-                style: AppTextStyles.lexenDecaBold14px.copyWith(),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Row(
-                children: [
-                  Image.asset(
-                    AppIcons.timeCircle,
-                    height: 14,
+                child: Center(
+                  child: Image.asset(
+                    icon,
+                    color: iconFrColor,
                     width: 14,
+                    height: 14,
                   ),
-                  const SizedBox(width: 8),
-                  Text(
-                    time,
-                    style: AppTextStyles.lexenDecaRegular11px.copyWith(
-                      color: AppColors.primary,
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ],
-          ),
-        ],
+            ),
+
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 2,
+                ),
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(AppRadius.full),
+                  color: statusBgColor,
+                ),
+                child: Text(
+                  status,
+                  style: AppTextStyles.lexenDecaBold11px.copyWith(
+                    fontSize: 10,
+                    color: statusFrColor,
+                  ),
+                ),
+              ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  subtitle,
+                  style: AppTextStyles.lexenDecaRegular11px.copyWith(
+                    color: AppColors.secondary,
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  title,
+                  style: AppTextStyles.lexenDecaBold14px.copyWith(),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  children: [
+                    Image.asset(
+                      AppIcons.timeCircle,
+                      height: 14,
+                      width: 14,
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      time,
+                      style: AppTextStyles.lexenDecaRegular11px.copyWith(
+                        color: AppColors.primary,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
